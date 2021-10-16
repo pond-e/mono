@@ -11,7 +11,7 @@ from struct import pack
 from serial import *
 from optparse import *
 from sys import stdout, stdin, stderr, exit
-import Image
+from PIL import Image
 import sys
 
 from parseFmt_Binary import FmtBinary 
@@ -234,7 +234,7 @@ if __name__=='__main__':
 
 	# UART 入力
 	t1=threading.Thread(target=WrkReadSerial)
-	t1.setDaemon(True)
+	t1.daemon = True
 	t1.start()
 	
 	# 入出力が tty ならキーボード入力を有効とする

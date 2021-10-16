@@ -71,7 +71,7 @@ def ReadFileNumber(filename):
 	flag = os.path.exists(filename)
 	if flag :
 		f = open( filename, 'r' )
-		line = f.readline();
+		line = f.readline()
 		number = int(line.strip())
 		f.close()
 	else :
